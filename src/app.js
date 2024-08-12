@@ -82,4 +82,15 @@ window.onload = function() {
   randomCardGenerator();
 
   setInterval(randomCardGenerator, 10000);
+
+  let heightInput = document.querySelector("#heightInput");
+  let widthInput = document.querySelector("#widthInput");
+
+  heightInput.addEventListener("input", () => {
+    document.querySelector("#card").style.height = heightInput.value + "px";
+  });
+
+  widthInput.addEventListener("input", () => {
+    document.querySelector("#card").style.width = widthInput.value + "px";
+  });
 };

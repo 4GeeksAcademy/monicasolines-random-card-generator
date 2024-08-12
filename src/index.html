@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Generate Random Card</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -14,9 +14,36 @@
   </head>
 
   <body class="bg-success">
+    <div class="dropdown m-3">
+      <button
+        class="btn btn-dark dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Input (height & width)
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li class="inputH">
+          <label>Height</label>
+          <input id="heightInput" class="picker" for="height" type="text" />
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li class="inputW">
+          <label>Width</label>
+          <input id="widthInput" class="picker" for="width" type="text" />
+        </li>
+      </ul>
+    </div>
+
     <div class="container-fluid">
       <div class="row justify-content-md-center align-content-center mt-5">
-        <div class="card  bg-light">
+        <div
+          id="card"
+          class="card bg-light"
+          style="height: 550px; width: 400px;"
+        >
           <div class="randomSuitTop display-1"></div>
           <div
             class="d-flex align-items-center justify-content-center"
@@ -33,7 +60,7 @@
     <div
       class="container-fluid d-flex justify-content-md-center align-content-center mt-5 mb-5"
     >
-      <button type="button" class="reloadButton btn btn-secondary">
+      <button type="button" class="reloadButton btn btn-dark">
         Generate New Card
       </button>
     </div>
